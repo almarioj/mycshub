@@ -26,8 +26,7 @@ SECRET_KEY = '^ep4tz06t0&v+#o^aq$zqnd7a+t%giwo^9ix&hh&yjfx4@^+u7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '128.199.151.210', '.mycshub.com']
 
 # Application definition
 
@@ -55,10 +54,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'conf.urls'
 
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+ROOT_FOLDER = os.path.split(PROJECT_ROOT)[0]
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(ROOT_FOLDER, 'frontend', 'templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -72,7 +74,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'conf.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
@@ -122,14 +123,21 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
 
+STATIC_ROOT = os.path.join(ROOT_FOLDER, STATIC_URL.strip("/"))
+MEDIA_ROOT = os.path.join(ROOT_FOLDER, *MEDIA_URL.strip("/").split("/"))
+
+STATICFILES_DIRS = (
+    os.path.join(ROOT_FOLDER, 'frontend', 'static'),
+)
 
 # RAVEN (SENTRY)
 RAVEN_CONFIG = {
     'dsn': 'https://803b8b9925e64fdeab638bb41f966a5d:2d061fb33e274d6db72d092d5a49ba78@sentry.io/103453',
     # If you are using git, you can also automatically configure the
     # release based on the git info.
-    'release': raven.fetch_git_sha(os.path.dirname(__file__)),
+    # 'release': raven.fetch_git_sha(os.path.dirname(__file__)),
 }
 
 
@@ -180,6 +188,6 @@ LOGGING = {
 
 # import local settings if any
 try:
-    from .local import *
-except:
+    from local import *
+except ImportError:
     pass
