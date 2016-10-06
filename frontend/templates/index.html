@@ -1,0 +1,415 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'vendors/owlcarousel/owl-carousel/owl.carousel.css' %}">
+<link rel="stylesheet" href="{% static 'vendors/owlcarousel/owl-carousel/owl.theme.css' %}">
+<link rel="stylesheet" href="{% static 'vendors/nivo-lightbox/dist/nivo-lightbox.min.css' %}">
+<link rel="stylesheet" href="{% static 'vendors/nivo-lightbox/themes/default/default.css' %}">
+<link rel="stylesheet" href="{% static 'vendors/magnific-popup/dist/magnific-popup.css' %}">
+<link rel="stylesheet" href="{% static 'vendors/animate-css/animate.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock css %}
+
+{% block content %}
+    <!-- ****************************** Sidebar ************************** -->
+    <nav id="sidebar-wrapper">
+        <a id="menu-close" href="#" class="close-btn toggle">CLOSE <i class="ion-log-in"></i></a>
+        <ul class="sidebar-nav">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#consultation">Consultation</a></li>
+            <li><a href="#testimonial">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- ****************************** Header ************************** -->
+    <header class="sticky" id="header">
+        <div class="container">
+            <div class="row" id="logo_menu">
+                <div class="col-xs-6">
+                    <a class="logo" href="#banner"><img src="{% static 'img/logo.png' %}" alt=""></a>
+                </div>
+                <div class="col-xs-6">
+                    <a id="menu-toggle" href="#" class="toggle" role="button" title="" data-toggle="tooltip" data-placement="left" data-original-title="Navigation"><i class="ion-navicon"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- ****************************** Banner ************************** -->
+    <section id="banner">
+        <div class="banner-overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 hidden-xs hidden-sm">
+                    <div class="hand-container">
+                    <img class="iphone-hand img_res wow animated bounceInUp animated" data-wow-duration="1.2s" src="{% static 'img/banner.png' %}" alt="">
+                    <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="headings">
+                        <h1 class="wow animated fadeInDown animated">
+                            Consolidated Services
+                        </h1>
+                        <p class="wow animated fadeInLeft animated">
+                            Consult with professionals who <br/>
+                            <strong>know</strong> the market <br/>
+                            <strong>work</strong> in the market <br/>
+                            <strong>are</strong> the market <br/>
+                        </p>
+
+                        <button class="btn btn-primary btn-lg wow animated bounceInUp animated">
+                            Singup
+                        </button>
+                        <button class="btn btn-primary btn-lg wow animated bounceInUp animated">
+                            Contact Us
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ****************************** About section ************************** -->
+    <section id="about" class="block">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-6 wow fadeInLeft animated">
+                    <div class="about-image">
+                        <img class="img-responsive" src="{% static 'img/about.jpg' %}" alt="">
+                    </div>
+                </div><!--/col-sm-6-->
+
+                <div class="col-sm-6 wow fadeInRight animated">
+
+                    <div class="title-area text-center">
+                        <h1 class="section-title">why us</h1>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 causes-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ante ex, fermentum vel libero eget interdum semper libero. Curabitur egestas, arcu id tempor convallis.</p>
+                            <ul class="feature-list">
+                                <li><i class="ion-android-star"></i> Reliable and Secure Platform</li>
+                                <li><i class="ion-android-star"></i> Free Consultations</li>
+                                <li><i class="ion-android-star"></i> Lorem ipsum dolor sit amet</li>
+                                <li><i class="ion-android-star"></i> Curabitur egestas</li>
+                            </ul>
+                            <button class="btn btn-default btn-download">Drop us a message. We're here to help.</a>
+                        </div>
+                    </div>
+                </div><!--/col-sm-6-->
+            </div><!--/row-->
+        </div><!--/container-->
+    </section>
+
+
+    <!-- ****************************** Services section ************************** -->
+    <section id="services" class="img-block-3col block">
+        <div class="container">
+            <div class="title-area text-center">
+                <h1 class="section-title">Services</h1>
+                <hr class="title-under-line-top">
+                <hr class="title-under-line-bottom">
+            </div>
+            <div class="row margin-top-50">
+                <div class="col-sm-6 pad-right-85">
+                    <ul class="item-list-right item-list-big">
+                        <li class="wow fadeInLeft animated">
+                            <div style="display: inline-block;">
+                                <div style="float: left;">
+                                    <h3 class="margin-top-right">Book Keeping</h3>
+                                </div>
+                                <div class="test-2">
+                                    <div class="icon-test">
+                                        <span class="x"><i class="ion-card"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>Class aptent taciti sociosqu litora torquent conubia nos per inceptos himenaeos.</p>
+                        </li>
+                        <li class="wow fadeInLeft animated">
+                            <div style="display: inline-block;">
+                                <div style="float: left;">
+                                    <h3 class="margin-top-right">Accounting</h3>
+                                </div>
+                                <div class="test-2">
+                                    <div class="icon-test">
+                                        <span class="x"><i class="ion-cash"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>Class aptent taciti sociosqu litora torquent conubia nos per inceptos himenaeos.</p>
+                        </li>
+                        <li class="wow fadeInLeft animated">
+                            <div style="display: inline-block;">
+                                <div style="float: left;">
+                                    <h3 class="margin-top-right">Servers, Network and Infrastructure</h3>
+                                </div>
+                                <div class="test-2">
+                                    <div class="icon-test">
+                                        <span class="x"><i class="ion-android-cloud-outline"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>Class aptent taciti sociosqu litora torquent conubia nos per inceptos himenaeos.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-6 pad-left-85">
+                    <ul class="item-list-left item-list-big">
+                        <li class="wow fadeInRight animated condensed-icon">
+                            <div style="display: inline-block;">
+                                <div class="test-2">
+                                    <div class="icon-test">
+                                        <span class="x"><i class="ion-android-unlock"></i></span>
+                                    </div>
+                                </div>
+                                <div style="float: left;">
+                                    <h3 class="margin-top-left">SAP MM, SAP POSDM, SAP FICO</h3>
+                                </div>
+                            </div>
+                            <p>Class aptent taciti sociosqu litora torquent conubia nos per inceptos himenaeos.</p>
+                        </li>
+                        <li class="wow fadeInRight animated condensed-icon">
+                            <div style="display: inline-block;">
+                                <div class="test-2">
+                                    <div class="icon-test">
+                                        <span class="x"><i class="ion-ios-paper-outline"></i></span>
+                                    </div>
+                                </div>
+                                <div style="float: left;">
+                                    <h3 class="margin-top-left">Content Writeups</h3>
+                                </div>
+                            </div>
+                            <p>Class aptent taciti sociosqu litora torquent conubia nos per inceptos himenaeos.</p>
+                        </li>
+                        <li class="wow fadeInRight animated">
+                            <div style="display: inline-block;">
+                                <div class="test-2">
+                                    <div class="icon-test">
+                                        <span class="x"><i class="ion-laptop"></i></span>
+                                    </div>
+                                </div>
+                                <div style="float: left;">
+                                    <h3 class="margin-top-left">Web, Mobile and Desktop Application Development</h3>
+                                </div>
+                            </div>
+                            <p>Class aptent taciti sociosqu litora torquent conubia nos per inceptos himenaeos.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ****************************** Consultation section ************************** -->
+    <section id="consultation" class="block overflow-visible">
+        <div class="container">
+            <div class="title-area text-center">
+                <h1 class="section-title">Consultation</h1>
+                <hr class="title-under-line-top">
+                <hr class="title-under-line-bottom">
+            </div>
+
+            <div class="row special-card-wraper">
+                <div class="col-sm-6 col-md-3 special-card-outer">
+                    <div class="feature-box wow animated flipInX animated special-card text-center">
+                        <div class="card-icon-box">
+                            <div class="card-icon-box-inner">
+                                <i class="ion-social-usd-outline"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Free of Charge</h3>
+                            <p>Class aptent taciti sociosutn tora torquent conub nost reptos himenaeos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 special-card-outer">
+                    <div class="feature-box wow animated flipInX animated special-card text-center">
+                        <div class="card-icon-box">
+                            <div class="card-icon-box-inner">
+                                <i class="ion-ios-list-outline"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Message Tracking</h3>
+                            <p>Class aptent taciti sociosutn tora torquent conub nost reptos himenaeos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 special-card-outer">
+                    <div class="feature-box wow animated flipInX animated special-card text-center">
+                        <div class="card-icon-box">
+                            <div class="card-icon-box-inner">
+                                <i class="ion-ios-people-outline"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Multi-Professional</h3>
+                            <p>Class aptent taciti sociosutn tora torquent conub nost reptos himenaeos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 special-card-outer">
+                    <div class="feature-box wow animated flipInX animated special-card text-center">
+                        <div class="card-icon-box">
+                            <div class="card-icon-box-inner">
+                                <i class="ion-email-unread"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Email Notifications</h3>
+                            <p>Class aptent taciti sociosutn tora torquent conub nost reptos himenaeos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </section>
+
+
+
+    <!-- ****************************** Testimonials ************************** -->
+    <section id="testimonial" class="block overflow-visible">
+        <div class="container">
+            <div id="review" class="owl-carousel owl-theme wow animated bounceInUp">
+                <div class="owl-wrapper-outer">
+                    <div class="owl-wrapper" style="width: 4560px; left: 0px; display: block;">
+                        <div class="owl-item" style="width: 1140px;">
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+                                        <div class="client-pic"><img class="img_res" src="{% static 'img/client-two.png' %}" alt=""></div>
+                                        <p class="client-name">
+                                            Shahjahan Jewel
+                                        </p>
+                                        <p class="review-star">
+                                            <i class="ion-star"></i>
+                                            <i class="ion-star"></i>
+                                            <i class="ion-star"></i>
+                                            <i class="ion-star"></i>
+                                            <i class="ion-star-outline"></i>
+                                        </p>
+                                        <p class="review-desc">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                                        </p>
+                                        <p class="testimonial-date">January 28, 2016</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item" style="width: 1140px;">
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-sm-8 col-md-offset-2">
+                                        <div class="client-pic"><img class="img_res" src="{% static 'img/client-two.png' %}" alt=""></div>
+                                        <p class="client-name">
+                                            Jane Doe
+                                        </p>
+                                        <p class="review-star">
+                                            <i class="ion-star"></i>
+                                            <i class="ion-star"></i>
+                                            <i class="ion-star"></i>
+                                            <i class="ion-star"></i>
+                                            <i class="ion-star-outline"></i>
+                                        </p>
+                                        <p class="review-desc">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                                        </p>
+                                        <p class="testimonial-date">January 28, 2016</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="owl-controls clickable">
+                    <div class="owl-buttons">
+                        <div class="owl-prev"></div>
+                        <div class="owl-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ****************************** Contact section ************************** -->
+    <section id="contact" class="block">
+            <div class="container">
+                <div class="title-area text-center">
+                    <h1 class="section-title">Get In Touch Say Hello!</h1>
+                    <hr class="title-under-line-top">
+                    <hr class="title-under-line-bottom">
+                </div>
+                <div class="contact-introductory-text text-center col-md-8 col-md-offset-2">
+                    This was a awesome app. I deleted all the others and kept only this one. But this update you just done ruined it, can't do anything with this. Went from the best to the worst, guess deleting it now. I will never understand when something's good always changing things and messing it up. Geez
+
+                </div>
+
+                <div class="row">
+                    <div id="response" class="col-md-11 col-md-offset-1"></div>
+                    <form id="contact_form" action="https://d2zav2bjdlctd5.cloudfront.net/theme_preview/lucy_pro/php/contact.php" method="post">
+                        <div class="col-md-5 col-md-offset-1">
+                            <div class="form-group">
+                                <input type="name" class="form-control height-50" id="name" name="name" placeholder="Name" required="">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control height-50" id="email" name="email" placeholder="Email" required="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <textarea class="form-control" placeholder="Message" name="message" id="message"></textarea>
+                        </div>
+                        <div class="col-md-12 text-center submit-btn-wraper">
+                            <button type="submit" name="submit" id="submit" class="btn btn-default btn-download btn-contact">send message<i class="ion-ios-arrow-thin-right icon-margin"></i></button>
+                        </div>
+                    </form>
+                </div><!--/row-->
+            </div>
+            <div class="clearfix"></div>
+    </section>
+{% endblock content %}
+
+{% block footer %}
+<section id="footer" class="block">
+    <div class="container text-center">
+        <div class="footer-logo">
+            <a class="logo" href="#banner"><img src="{% static 'img/logo.png' %}" alt="Footer Logo"></a>
+        </div>
+        <div class="copyright">
+            ©2016 <span class="text-green">mycshub.com</span>
+        </div>
+    </div><!-- container -->
+</section>
+{% endblock footer %}
+
+{% block js %}
+<script src="{% static 'vendors/wow.min.js' %}"></script>
+<script src="{% static 'vendors/owlcarousel/owl-carousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'vendors/nivo-lightbox/dist/nivo-lightbox.min.js' %}"></script>
+<script src="{% static 'vendors/magnific-popup/dist/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'vendors/smoothscroll.js' %}"></script>
+<script src="{% static 'vendors/jquery.ajaxchimp.min.js' %}"></script>
+<script src="{% static 'vendors/jquery.easy-ticker.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+<script src="{% static 'js/contact.js' %}"></script>
+{% endblock js%}
