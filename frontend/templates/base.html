@@ -17,9 +17,10 @@
     <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="{% static 'vendors/bootstrap/dist/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}">
-    <link rel="stylesheet" href="{% static 'vendors/ionicons/css/ionicons.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css' %}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/ionicons/css/ionicons.min.css' %}">
     {% block css %}{% endblock css %}
 
     <!-- Google Fonts -->
@@ -30,7 +31,7 @@
     <!-- Google Analytics -->
     {{ GA_CODE }}
 </head>
-<body id="home">
+<body id="home" class="nav-md {% block body_class %}{% endblock %}">
     <!-- ============================= Preloader ============================= -->
     <div id="preloader"></div>
 
@@ -42,10 +43,10 @@
     <!-- ============================= Footer ============================= -->
     {% block footer %}{% endblock footer %}
 
-
+    {% block backtotop %}
     <!-- ============================= Back to top ============================= -->
     <a id="back-to-top" href="/" class="btn btn-primary btn-lg back-to-top" role="button" title="" data-toggle="tooltip" data-placement="left" data-original-title="Click to return on the top page"><span class="glyphicon glyphicon-chevron-up"></span></a>
-
+    {% endblock backtotop %}
 
     <!-- All the scripts -->
     <script src="{% static 'vendors/jquery/dist/jquery.min.js' %}"></script>

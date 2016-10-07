@@ -1,13 +1,4 @@
 /*
-    Theme Name:L U C Y
-    Theme URI:
-    Author: ThemeWagonAuthor
-    URI: http://themewagon.com/
-    Description: One page app landing HTML 5 CSS 3 template powered by Bootstrap 3.Version:1.0.1
-*/
-
-/***
-
 Table of Contents:
 -----------------------------------------------------------------------------*
     01 - General
@@ -16,16 +7,12 @@ Table of Contents:
     04 - Header
     05 - Banner
     06 - About
-    07 - services
-    08 - Image-Content Blocks
-    09 - Screenshots
-    10 - Developers
-    11 - Testimonial
-    12 - Pricing table
-    13 - Subscribe Form
-    14 - Contact us
-    15 - Footer Section
-    16 - Responsive Styles
+    07 - Services
+    08 - Consultation
+    09 - Testimonial
+    10 - Contact
+    11 - Footer Section
+    12 - Responsive Styles
 -----------------------------------------------------------------------------*
 
 
@@ -723,11 +710,10 @@ span.x {
 
 
 /* /////////////////////////////////////////////////////////////////////
-// 08 - Speciality
+// 08 - Consultation
 /////////////////////////////////////////////////////////////////////*/
 
-#features {
-    background-color:#f8f8f8;
+#consultation {
     padding-bottom: 130px;
 }
 .feature-box {
@@ -802,204 +788,8 @@ span.x {
 
 
 
-
-
-
 /* /////////////////////////////////////////////////////////////////////
-// 10 - Screenshots
-/////////////////////////////////////////////////////////////////////*/
-
-#gallery {
-
-}
-#screenshots .item {
-    padding:0px 0px;
-    margin:10px;
-    color:#FFF;
-    -webkit-border-radius:3px;
-    -moz-border-radius:3px;
-    border-radius:3px;
-    text-align:center;
-    display:block;
-}
-.customNavigation {
-    text-align:center;
-    margin-top:40px;
-}
-
-.customNavigation a {
-    -webkit-user-select:none;
-    -khtml-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none;
-    -webkit-tap-highlight-color:rgba(0,0,0,0);
-}
-.gallery-nav {
-    color:#41A1E1;
-    font-size:2em;
-    margin:0 6px;
-    padding:10px 19px;
-    line-height:0;
-    border:2px solid;
-    border-radius:50%;
-}
-.gallery-nav:hover,.gallery-nav:focus,.gallery-nav:active {
-    color:#fff;
-    background:#405162;
-    border-color: #405162;
-}
-
-
-/* /////////////////////////////////////////////////////////////////////
-// 11 - Developers
-/////////////////////////////////////////////////////////////////////*/
-#team{
-    padding-top: 150px;
-    padding-bottom: 140px;
-}
-.border-img {
-    position:relative;
-}
-.border-img .border {
-    position:absolute;
-    border:30px solid #fff;
-    top:-1px;
-    left:-1px;
-    right:-1px;
-    bottom:-1px;
-    transition:border 0.4s;
-    border-radius:100%;
-}
-.team-member:hover .border-img .border {
-    border-width:0px;
-}
-.border-img img {
-    border-radius:100%;
-}
-.team-social {
-    margin:0;
-    padding:8px 0px;
-    list-style:none;
-    text-align:center;
-}
-.team-social li {
-    display:inline-block;
-    font-size:22px;
-    padding:0px 0px;
-    color:#fff;
-}
-.team-social li a {
-    display:inline-block;
-}
-.team-member {
-    text-align:center;
-    margin-bottom:40px;
-    max-width:360px;
-    margin:0 auto;
-    margin-bottom:40px;
-}
-.team-member p {
-    padding:10px 10px 15px 10px;
-}
-.team-member h2 {
-    font-size:25px;
-}
-.team-social li a i {
-    display:block;
-    width:30px;
-    height:30px;
-    line-height:1.6;
-    border-radius:50%;
-    transition:0.5s ease all;
-}
-.facebook a i {
-    color:#fff;
-    border-color:#3B5998;
-}
-.facebook a i:hover {
-    color:#fff;
-    background-color:#3B5998;
-}
-.twitter a i {
-    color:#fff;
-    border-color:#41A1E1;
-}
-.twitter a i:hover {
-    color:#fff;
-    background-color: #2A80BA;
-}
-.linkedin a i {
-    color:#fff;
-    border-color:#007bb6;
-}
-.linkedin a i:hover {
-    color:#fff;
-    background-color:#007bb6;
-}
-.googleplus a i {
-    color:#fff;
-    border-color:#dd4b39;
-}
-.googleplus a i:hover {
-    color:#fff;
-    background-color:#dd4b39;
-}
-.github a i {
-    color:#fff;
-    border-color:#444;
-}
-.github a i:hover {
-    color:#fff;
-    background-color: #444;
-}
-
-.social-media-list {
-    margin:0;
-    padding:8px 0px;
-    list-style:none;
-    text-align:center;
-}
-.social-media-list li {
-    display:inline-block;
-    font-size:22px;
-    padding:0px 0px;
-    color:#fff;
-}
-.social-media-list li a {
-    display:inline-block;
-}
-.developer-card{
-    margin: 15px;
-    background-color: #15cc9a;
-    color: #fff;
-    transition-duration: 0.5s;
-}
-.developer-card:hover{
-    box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
-}
-.no-pad-left-right{
-    padding-left: 0;
-    padding-right: 0;
-}
-.developer-desc{
-    padding-top: 50px;
-}
-.developer-name{
-    font-size: 22px;
-    font-weight: 600;
-}
-.developer-designation{
-    font-size: 18px;
-}
-.developer-area-wraper{
-    padding-top: 80px;
-}
-.img-res{
-    width: 100%;
-}
-/* /////////////////////////////////////////////////////////////////////
-// 12 - Testimonial
+// 09 - Testimonial
 /////////////////////////////////////////////////////////////////////*/
 
 #testimonial {
@@ -1105,287 +895,9 @@ p.client-name {
     top: 70%;
 }
 
-/************************************************
-
-tweets
-
-/*****************************************************/
-
-#tweets{
-    padding:15px 0;
-    background-color:#15cc9a;
-    color:#fff;
-}
-.name-who-tweets{
-    font-weight: bold;
-}
-#tweets i{
-    padding: 0 15px;
-}
-.ticker-wraper{
-    width: 100%;
-}
-
 
 /* /////////////////////////////////////////////////////////////////////
-// 13 - Pricing table
-/////////////////////////////////////////////////////////////////////*/
-#pricing{
-    background-color:#f3f3f3;
-    padding-top: 90px;
-    padding-bottom:120px;
-}
-ul.pricing-table {
-    display:block;
-    width:100%;
-        margin-top: 60px;
-}
-ul.pricing-table:after {
-    display:block;
-    content:"";
-    clear:both;
-}
-ul.pricing-table>li {
-    display:block;
-    position:relative;
-    z-index:1;
-    float:left;
-    width:30.66666%;
-    background:#fff;
-    color:#444;
-    margin:0 4% 0 0;
-    padding:15px;
-    text-align:center;
-    padding-top: 30px;
-    padding-bottom: 35px;
-    transition-duration:0.5s;
-}
-ul.pricing-table>li:hover{
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
-ul.pricing-table>li:last-child {
-    margin-right:0;
-}
-ul.pricing-table .stamp {
-    position:absolute;
-    right:-20px;
-    top:60px;
-    height:80px;
-    width:80px;
-    padding:10px;
-    border-radius:50%;
-    overflow:hidden;
-    font-size:12px;
-    background:#fff;
-    border:1px solid #eee;
-    text-transform:uppercase;
-    line-height:1;
-    font-weight:bold;
-    letter-spacing:0px;
-}
-ul.pricing-table .stamp i {
-    display:block;
-    padding:0 0 4px 0;
-    font-size:27px;
-}
-ul.pricing-table h3 {
-    display:block;
-    padding:30px 5px 30px 5px;
-    margin:0;
-    color:#444;
-    background-color: #e5e5e5;
-    color:#fff;
-    font-size: 24px;
-}
-ul.pricing-table li.silver h3 {
-    background:#b2b2b2;
-    color:#fff;
-}
-ul.pricing-table li.silver .stamp {
-    color:#888;
-    border:1px solid #888;
-}
-ul.pricing-table li.gold h3 {
-    background:#ccbb46;
-    color:#fff;
-}
-ul.pricing-table li.gold .stamp {
-    color:#a98815;
-    border:1px solid #a98815;
-    text-align:center;
-}
-ul.pricing-table span {
-    display:block;
-    font-size:40px;
-    font-weight:bold;
-    color:#222;
-    padding:30px 0;
-    line-height:1.3;
-}
-ul.pricing-table span small {
-    font-size:14px;
-    font-weight:normal;
-    color:#ccc;
-    display:block;
-    line-height:1;
-}
-ul.pricing-table .benefits-list {
-    margin:0 0 30px 0;
-}
-ul.pricing-table .benefits-list li {
-    padding:11px 0;
-}
-ul.pricing-table .benefits-list li.not {
-    text-decoration:line-through;
-    color:#ddd;
-}
-ul.pricing-table a.buy {
-    display:block;
-    padding:15px;
-    font-size:28px;
-    background:#f2f2f2;
-    border-radius:0 0 5px 5px;
-    color:#444;
-    text-align:center;
-    margin-top: 70px;
-}
-ul.pricing-table a.buy:hover .ion-ios-cart-outline:before {
-    content: "\f3d6";
-}
-li.special-price {
-    background-color: #e7faf5;
-    margin-left: -15px;
-    margin-right: -15px;
-}
-li.special-price strong{
-    color: #313131;
-}
-.bg-color-grad {
-    background:#00aeff;
-    background:-moz-linear-gradient(top,#00aeff 0%,#00e0a4 100%);
-    background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#00aeff),color-stop(100%,#00e0a4));
-    background:-webkit-linear-gradient(top,#00aeff 0%,#00e0a4 100%);
-    background:-o-linear-gradient(top,#00aeff 0%,#00e0a4 100%);
-    background:-ms-linear-gradient(top,#00aeff 0%,#00e0a4 100%);
-    background:linear-gradient(to bottom,#00aeff 0%,#00e0a4 100%);
-    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aeff',endColorstr='#00e0a4',GradientType=0 );
-}
-.bottom-img-wraper{
-        display: none;
-    }
-
-@media (max-width:767px) {
-    ul.pricing-table>li {
-        width:100%;
-        margin: 0 0 20px 0;
-    }
-}
-
-
-/* /////////////////////////////////////////////////////////////////////
-// 14 - Subscribe Form
-/////////////////////////////////////////////////////////////////////*/
-
-#subscribe {
-
-}
-.subscription-wraper{
-    margin-top: 45px;
-        font-size: 13px;
-}
-.subscription-area {
-    background-color: #15cc9a;
-    color: #fff;
-    text-align: center;
-    padding: 58px 0;
-    margin-top: 10px;
-}
-.subscription-ul li{
-    margin-bottom: 10px;
-}
-.subscription-ul li i{
-    color:#15cc9a;
-}
-.subscription-content .title-text{
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 0;
-}
-.subscription-content p{
-    font-size: 13px;
-}
-.susbcribe-text {
-    text-align:center;
-    font-size:24px;
-    font-weight:100;
-    padding-bottom:30px;
-    line-height:40px;
-}
-.container.subscribe-wrap {
-    max-width:600px;
-}
-.mailchimp .input-group{
-    padding: 0 15px;
-}
-.subscription-form{
-    padding:0 35px;
-}
-.subscription-form-control{
-    background-color:#fff;
-    border-color: 0px;
-    border-color: 0px;
-    height: 50px;
-    padding: 6px 25px;
-}
-input#srch-term {
-    border: 0px;
-    padding: 6px 22px;
-}
-.input-group-btn> .btn {
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-    border: 0px;
-    background-color: #fff;
-    padding: 8px 25px;
-    color: #999999;
-    font-size: 24px;
-}
-.mailchimp input[type="email"] {
-    font-size:13px;
-    padding:10px 20px;
-    height:auto;
-    border:none;
-    border-radius:0px;
-    box-shadow:none;
-    background:#fff;
-    color: #444;
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-}
-.btn-custom {
-    padding:19px 15px;
-    background:#41A1E1;
-    box-shadow:none;
-    border:2px solid #41A1E1;
-    color:#FFF;
-    border-radius:0px;
-}
-.subscribe-wrap .form-group {
-    margin-right:-16px;
-}
-.subscription-error {
-    color:#d9534f;
-}
-.subscription-success {
-    color:#5cb85c;
-}
-#contactForm .success,#contactForm .error {
-    display: none;
-}
-
-
-/* /////////////////////////////////////////////////////////////////////
-// 15 - Contact us
+// 10 - Contact us
 /////////////////////////////////////////////////////////////////////*/
 .contact-introductory-text{
     font-size: 13px;
@@ -1494,7 +1006,7 @@ input:-moz-placeholder,textarea:-moz-placeholder {
 
 
 /*/////////////////////////////////////////////////////////////////////
-// 16 - Footer Section
+// 11 - Footer Section
 /////////////////////////////////////////////////////////////////////*/
 
 
@@ -1531,7 +1043,7 @@ ul.social-icons li a {
 
 
 /////////////////////////////////////////////////////////////////////
-// 17 - Responsive Styles
+// 12 - Responsive Styles
 /////////////////////////////////////////////////////////////////////*/
 
 

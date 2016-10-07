@@ -20,8 +20,17 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^', TemplateView.as_view(template_name="index.html"))
+    url(r'^$', TemplateView.as_view(template_name="index.html"), name='index'),
+    url(r'^login/$', TemplateView.as_view(template_name="auth/login.html"), name='login'),
+    url(r'^dashboard/$', TemplateView.as_view(template_name="dashboard_base.html"), name='dashboard'),
+    url(r'^dashboard/messages/$', TemplateView.as_view(template_name="messages/message_list.html"), name='messages'),
+
+    url(r'^400/$', TemplateView.as_view(template_name="errors/400.html")),
+    url(r'^403/$', TemplateView.as_view(template_name="errors/403.html")),
+    url(r'^404/$', TemplateView.as_view(template_name="errors/404.html")),
+    url(r'^500/$', TemplateView.as_view(template_name="errors/500.html")),
 ]
+
 
 if settings.DEBUG:
     import debug_toolbar
@@ -30,7 +39,7 @@ if settings.DEBUG:
     ]
 
 
+handler400 = TemplateView.as_view(template_name="errors/400.html")
+handler403 = TemplateView.as_view(template_name="errors/403.html")
 handler404 = TemplateView.as_view(template_name="errors/404.html")
 handler500 = TemplateView.as_view(template_name="errors/500.html")
-handler403 = TemplateView.as_view(template_name="errors/403.html")
-handler400 = TemplateView.as_view(template_name="errors/400.html")

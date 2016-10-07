@@ -1,1 +1,19 @@
-<h2>Bad Request</h2>
+{% extends 'dashboard_base.html' %}
+
+{% block main_content %}
+<div class="main_container">
+    <div class="col-md-12">
+        <div class="col-middle">
+            <div class="text-center text-center">
+                <h1 class="error-number">400</h1>
+                <h2>Bad Request</h2>
+                <p>
+                    The server cannot process this request at this time. <a href="#">Report this?</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main_content %}
+
+{% block footer %}{% endblock footer %}
