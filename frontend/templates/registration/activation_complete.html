@@ -1,0 +1,14 @@
+{% extends 'dashboard_base.html' %}
+{% load staticfiles %}
+
+{% block body_class %}login{% endblock %}
+
+{% block content %}
+<div>
+    <div class="login_wrapper">
+        <p>Your account has successfully been activated. You may now login <a href="{% url 'login' %}">here</a>.</p>
+    </div>
+</div>
+{% endblock content %}
+
+{% block footer %}{% endblock footer %}

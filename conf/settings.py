@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'accounts',
+
     # logging
     'raven.contrib.django.raven_compat',
 ]
@@ -140,6 +142,9 @@ RAVEN_CONFIG = {
     # 'release': raven.fetch_git_sha(os.path.dirname(__file__)),
 }
 
+
+# DJANGO REGISTRATION HMAC SETTINGS
+ACCOUNT_ACTIVATION_DAYS = 1
 
 LOGGING = {
     'version': 1,

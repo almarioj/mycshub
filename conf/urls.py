@@ -15,16 +15,42 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.contrib.auth.views import login, password_change, password_reset, password_reset_confirm
 from django.conf import settings
 from django.views.generic import TemplateView
+
+from accounts.forms import RegistrationForm, AuthenticationForm, PasswordChangeForm, PasswordResetForm, SetPasswordForm
+from registration.backends.hmac.views import RegistrationView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', TemplateView.as_view(template_name="index.html"), name='index'),
-    url(r'^login/$', TemplateView.as_view(template_name="auth/login.html"), name='login'),
     url(r'^dashboard/$', TemplateView.as_view(template_name="dashboard_base.html"), name='dashboard'),
     url(r'^dashboard/messages/$', TemplateView.as_view(template_name="messages/message_list.html"), name='messages'),
 
+    # django-registration overrides
+    url(r'^accounts/register/$', RegistrationView.as_view(form_class=RegistrationForm), name='register'),
+    url(r'^accounts/login/$', login, {'authentication_form':AuthenticationForm}, name='login'),
+    url(r'^accounts/password/change/$', password_change,
+        {'password_change_form':PasswordChangeForm,
+        'post_change_redirect': 'auth_password_change_done'}, name='auth_password_change'),
+    url(r'^accounts/password/reset/$', password_reset,
+        {'post_reset_redirect': 'auth_password_reset_done',
+         'email_template_name': 'registration/password_reset_email.txt',
+         'password_reset_form':PasswordResetForm},
+        name='auth_password_reset'),
+    url(r'^accounts/password/reset/confirm/(?P<uidb64>[0-9A-Za-z_\-]+)/'
+        r'(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$', password_reset_confirm,
+        {'post_reset_redirect': 'auth_password_reset_complete',
+         'set_password_form':SetPasswordForm},
+        name='auth_password_reset_confirm'),
+
+    # django-registration urls
+    url(r'^accounts/', include('registration.backends.hmac.urls')),
+    url(r'^accounts/', include('registration.auth_urls')),
+    url(r'^accounts/', include('accounts.urls')),
+
+    # error urls
     url(r'^400/$', TemplateView.as_view(template_name="errors/400.html")),
     url(r'^403/$', TemplateView.as_view(template_name="errors/403.html")),
     url(r'^404/$', TemplateView.as_view(template_name="errors/404.html")),

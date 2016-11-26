@@ -1,0 +1,8 @@
+Welcome to MyCSHub!
+
+Thank you for registering. Please click on the verification link below to start using our services.
+http://{{ site.domain }}{% url 'registration_activate' activation_key=activation_key %}
+
+This verification link is only valid for {{ expiration_days }} day.
+
+- MyCSHUB
