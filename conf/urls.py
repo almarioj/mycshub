@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.auth.views import login, password_change, password_reset, password_reset_confirm
 from django.conf import settings
@@ -25,12 +26,13 @@ from registration.backends.hmac.views import RegistrationView
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', TemplateView.as_view(template_name="index.html"), name='index'),
-    url(r'^dashboard/$', TemplateView.as_view(template_name="dashboard_base.html"), name='dashboard'),
     url(r'^dashboard/messages/$', TemplateView.as_view(template_name="messages/message_list.html"), name='messages'),
 
     # django-registration overrides
     url(r'^accounts/register/$', RegistrationView.as_view(form_class=RegistrationForm), name='register'),
-    url(r'^accounts/login/$', login, {'authentication_form':AuthenticationForm}, name='login'),
+    url(r'^accounts/login/$', login,
+        {'authentication_form':AuthenticationForm,
+         'redirect_field_name':'redirect'}, name='login'),
     url(r'^accounts/password/change/$', password_change,
         {'password_change_form':PasswordChangeForm,
         'post_change_redirect': 'auth_password_change_done'}, name='auth_password_change'),
@@ -57,6 +59,8 @@ urlpatterns = [
     url(r'^500/$', TemplateView.as_view(template_name="errors/500.html")),
 ]
 
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
     import debug_toolbar

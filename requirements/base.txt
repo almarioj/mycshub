@@ -1,2 +1,4 @@
 Django==1.10.2
 raven==5.27.1
+Pillow==3.4.2
+easy_thumbnails==2.3

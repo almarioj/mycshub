@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '^ep4tz06t0&v+#o^aq$zqnd7a+t%giwo^9ix&hh&yjfx4@^+u7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '128.199.151.210', '.mycshub.com']
 
@@ -38,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # 3rd party
+    'easy_thumbnails',
+
+    # apps
     'accounts',
 
     # logging
@@ -187,6 +191,12 @@ LOGGING = {
             'handlers': ['console'],
             'propagate': False,
         },
+    },
+}
+
+THUMBNAIL_ALIASES = {
+    '': {
+        'avatar': {'size': (50, 50), 'crop': True},
     },
 }
 

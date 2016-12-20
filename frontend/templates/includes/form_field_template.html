@@ -1,0 +1,22 @@
+<div class="form-group">
+    {% if not field.is_hidden %}
+        <label class="control-label {{ label_class }}" for="{{ field.id_for_label }}">{{ field.label }}{% if field_required or field.field.required %} <span class="text-danger">*</span>{% endif %}</label>
+    {% endif %}
+    <div class="{{ field_class }}{% if field.errors %} parsley-error{% endif %}">
+        {{ field }}
+
+        {% if field.help_text %}
+             <span class="help-block">
+                <p>{{ field.help_text }}</p>
+            </span>
+        {% endif %}
+
+        {% if field.errors %}
+            <ul class="parsley-errors-list filled">
+            {% for error in field.errors %}
+                <li class="parsley-required">{{ error }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</div>

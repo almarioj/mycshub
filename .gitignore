@@ -57,7 +57,11 @@ node_modules/
 .env
 
 # User-uploaded media
-projectd/media/
+media/
+static/
 
 # Hitch directory
 tests/.hitch
+
+# Test DB
+*.sqlite3
